@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import BookForm from './components/BookForm/BookForm'
+import BookList from './components/BookList/BookList'
+import Filter from './components/Filter/Filter'
+
+import './App.css'
+import Error from './components/Error/Error'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='app'>
+			<header className='app-header'>
+				<h1>Book Library App</h1>
+			</header>
+			<main className='app-main'>
+				<div className='app-left-column'>
+					<BookForm />
+				</div>
+				<div className='app-right-column'>
+					<Filter />
+					<BookList />
+				</div>
+			</main>
+			<Error />
+		</div>
+	)
 }
 
-export default App;
+export default App
